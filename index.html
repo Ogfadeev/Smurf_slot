@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Слот с уникальными синими созданиями</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1>🎰 Слот с уникальными синими созданиями 🎰</h1>
+
+<div id="slot-machine" role="main" aria-label="Игровой автомат">
+  <div id="balance">Баланс: 1000 монет</div>
+  <div>
+    Ставка:
+    <select id="bet-select" aria-label="Выбор ставки">
+      <option value="50">50</option>
+      <option value="100" selected>100</option>
+      <option value="250">250</option>
+      <option value="500">500</option>
+    </select>
+    монет
+  </div>
+
+  <div id="reels" aria-live="polite" aria-atomic="true">
+    <div class="reel" id="reel1" role="listitem" aria-label="Первый барабан"></div>
+    <div class="reel" id="reel2" role="listitem" aria-label="Второй барабан"></div>
+    <div class="reel" id="reel3" role="listitem" aria-label="Третий барабан"></div>
+  </div>
+
+  <button id="spin-btn" aria-label="Крутить барабаны">Крутить</button>
+
+  <div id="message" aria-live="assertive"></div>
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
